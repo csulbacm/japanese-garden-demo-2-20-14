@@ -7,10 +7,57 @@
 	<body>
 		
 		<div class="wrapper">		
-			<div class="content">
-				<div class="abs"></div>
+			<div class="content" id="jessica">
+				
+				<div class="abs" data-x="100" data-y="120">
+					<div class="tooltip">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, praesentium nam est exceptur.
+						<a href="http://linux4hope.org">l4h</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="abs" data-x="300" data-y="40">
+					<div class="tooltip">
+						<blockquote>
+							<em>
+								This is too dope D:
+							</em>
+						</blockquote>
+							<p style="text-align:right"> &mdash; Jaylen Wimbish</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+	<script>
+		$(
+			function  () {
+				$(".tooltip").hide();
+
+				$(".abs").each( function(n, e) {
+					console.log([n,e]);
+					var me = $(e);
+					var left =  me.data('x');
+					var top =  me.data('y');
+					me.css( { 
+						'left' : left + 'px',
+						'top' : top + 'px'
+					})
+				});
+
+
+				$(".abs").hover( function () {
+					$($(this).find(".tooltip")[0]).show();
+				}, function() {
+					$($(this).find(".tooltip")[0]).hide();
+				} );
+			}
+		);
+
+	</script>
 	</body>
-</html>
+</html> 

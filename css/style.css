@@ -23,14 +23,21 @@ body {
 	height: 720px;
 	margin: 0 auto;
 
+
+}
+
+
+.tooltip {
+	padding: 10px 20px;
+	box-shadow: rgba(0,0,0,.4) 0px 0px 5px;
+	 background: #fff;
+	 width: 200px;
+	 height: 90px;
 }
 
 .content .abs {
 	height: 30px;
 	width: 30px;
-	
-	top:120px;
-	left:100px;
 
 	position: absolute;
 
@@ -39,6 +46,5 @@ body {
 }
 
 .content .abs:hover {
-	
 	background: rgba(200,0,0,1);
 }
