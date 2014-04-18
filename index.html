@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Garden Demo</title>
+		<title>Map of the Garden</title>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -9,22 +9,25 @@
 		<div class="wrapper">		
 			<div class="content" id="jessica">
 				
-				<div class="abs" data-x="100" data-y="120">
+				<div class="abs" data-x="109" data-y="130">
 					<div class="tooltip">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, praesentium nam est exceptur.
-						<a href="http://linux4hope.org">l4h</a>
-						</p>
+						<header>The Dry Garden Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour8.html">
+						<img src="images/dry_garden_room.jpg" alt="The Dry Garden Room" width="200" height="150"></a>
+				
+						</div>
 					</div>
 				</div>
 
-				<div class="abs" data-x="300" data-y="40">
+				<div class="abs" data-x="293" data-y="42">
 					<div class="tooltip">
-						<blockquote>
-							<em>
-								This is too dope D:
-							</em>
-						</blockquote>
-							<p style="text-align:right"> &mdash; Jaylen Wimbish</p>
+						<header>The Tea House Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour6.html">
+						<img src="images/tea_house_room.jpg" alt="The Tea House Room" width="200" height="150"></a>
+				
+
 					</div>
 				</div>
 
@@ -38,12 +41,14 @@
 			function  () {
 				$(".tooltip").hide();
 
-				$(".abs").each( function(n, e) {
+				$(".abs").each( function(n, e) 
+				{
 					console.log([n,e]);
 					var me = $(e);
 					var left =  me.data('x');
 					var top =  me.data('y');
-					me.css( { 
+					me.css( 
+					{ 
 						'left' : left + 'px',
 						'top' : top + 'px'
 					})
