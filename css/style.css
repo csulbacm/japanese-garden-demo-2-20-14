@@ -20,22 +20,28 @@ body {
 	width: 560px;
 	height: 720px;
 	margin: 0 auto;
-
-
 }
 
+img{
+	border: 1px solid #a4a4a4;
+}
 
 .tooltip {
+	font-family: 'Open Sans', sans-serif;
 	padding: 3px 0 0 3px;
 	box-shadow: 1px 4px 5px rgba(0,0,0,0.59);
 	background: #fffAF0;
 	width: 203px;
-	height: 170px;
+	height: 175px;
 	border-radius: 3px;
 	border: 1px solid #dca; 
 	top: 14px;
 	left: 14px;
 	position:absolute;
+}
+
+.bottom{
+	top: -165px;
 }
 
 header{
