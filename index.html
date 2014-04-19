@@ -1,35 +1,127 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Garden Demo</title>
+		<title>Map of the Garden</title>
 		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		
 		<div class="wrapper">		
-			<div class="content" id="jessica">
+			<div class="content">
+				<div class="abs" data-x="240" data-y="692">
+					<div class="tooltip bottom">
+						<header>Art of Entry</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tours1.html">
+						<img src="images/art_of_entry.jpg" alt="The Art of Entry" width="200" height="150"></a>				
+						</div>
+					</div>
+				</div>
 				
-				<div class="abs" data-x="100" data-y="120">
+				<div class="abs" data-x="290" data-y="570">
+					<div class="tooltip bottom">
+						<header>Voila Moment</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tours2.html">
+						<img src="images/voila_moment.jpg" alt="Voila Moment" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="395" data-y="560">
+					<div class="tooltip bottom">
+						<header>The First Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tours3.html">
+						<img src="images/the_first_room.jpg" alt="The First Room" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="340" data-y="365">
 					<div class="tooltip">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, praesentium nam est exceptur.
-						<a href="http://linux4hope.org">l4h</a>
-						</p>
+						<header>The Black Rock Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tours4.html">
+						<img src="images/the_black_rock_room.jpg" alt="The Black Rock Room" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="359" data-y="189">
+					<div class="tooltip">
+						<header>The Moon Bridge</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tours5.html">
+						<img src="images/the_moon_bridge.jpg" alt="The Moon Bridge" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="293" data-y="42">
+					<div class="tooltip">
+						<header>The Tea House Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour6.html">
+						<img src="images/tea_house_room.jpg" alt="The Tea House Room" width="200" height="150"></a>
+						</div>
+					</div>
+				</div>	
+				
+				<div class="abs" data-x="234" data-y="101">
+					<div class="tooltip">
+						<header>The Pong Viewing Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour7.html">
+						<img src="images/the_pond_viewing_room.jpg" alt="The Pond Viewing Room" width="200" height="150"></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="109" data-y="130">
+					<div class="tooltip">
+						<header>The Dry Garden Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour8.html">
+						<img src="images/dry_garden_room.jpg" alt="The Dry Garden Room" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
+				<div class="abs" data-x="213" data-y="265">
+					<div class="tooltip">
+						<header>The Zig-Zag Bridge</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour9.html">
+						<img src="images/the_zig_zag_bridge.jpg" alt="The Zig-Zag Bridge" width="200" height="150"></a>			
+						</div>
 					</div>
 				</div>
 
-				<div class="abs" data-x="300" data-y="40">
+				<div class="abs" data-x="145" data-y="454">
 					<div class="tooltip">
-						<blockquote>
-							<em>
-								This is too dope D:
-							</em>
-						</blockquote>
-							<p style="text-align:right"> &mdash; Jaylen Wimbish</p>
+						<header>The Willow Terrace Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour10.html">
+						<img src="images/the_willow_terrace_room.jpg" alt="The Willow Terrace Room" width="200" height="150"></a>			
+						</div>
 					</div>
 				</div>
+				
+				<div class="abs" data-x="175" data-y="581">
+					<div class="tooltip bottom">
+						<header>The Last Room</header>
+						<div>			
+						<a href="http://www.csulb.edu/~jgarden/aboutus/Tours/tour11.html">
+						<img src="images/the_last_room.jpg" alt="The Last Room" width="200" height="150"></a>			
+						</div>
+					</div>
+				</div>
+				
 
-			</div>
-		</div>
+			
+	
 
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 
@@ -38,12 +130,14 @@
 			function  () {
 				$(".tooltip").hide();
 
-				$(".abs").each( function(n, e) {
+				$(".abs").each( function(n, e) 
+				{
 					console.log([n,e]);
 					var me = $(e);
 					var left =  me.data('x');
 					var top =  me.data('y');
-					me.css( { 
+					me.css( 
+					{ 
 						'left' : left + 'px',
 						'top' : top + 'px'
 					})
